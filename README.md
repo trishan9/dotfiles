@@ -1,4 +1,4 @@
-# ~/.dotfiles
+# ~/dotfiles
 
 ## Demo
 
@@ -19,3 +19,11 @@
 - Waybar
 - Rofi
 - Dolphin
+
+# Get started
+
+To use chezmoi:
+
+```
+chezmoi init --apply trishan9
+```
