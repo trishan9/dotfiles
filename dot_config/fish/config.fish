@@ -1,25 +1,30 @@
-set -g fish_greeting
-
-if status is-interactive
-    starship init fish | source
+function fish_prompt -d "Write out the prompt"
+    # This shows up as USER@HOST /home/user/ >, with the directory colored
+    # $USER and $hostname are set by fish, so you can just use them
+    # instead of using `whoami` and `hostname`
+    printf '%s@%s %s%s%s > ' $USER $hostname \
+        (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
 end
 
-# List Directory
-alias ls="lsd"
-alias l="ls -l"
-alias la="ls -a"
-alias lla="ls -la"
-alias lt="ls --tree"
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    set fish_greeting
 
-# Handy change dir shortcuts
-abbr .. 'cd ..'
-abbr ... 'cd ../..'
-abbr .3 'cd ../../..'
-abbr .4 'cd ../../../..'
-abbr .5 'cd ../../../../..'
+end
 
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-abbr mkdir 'mkdir -p'
+starship init fish | source
+if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
+    cat ~/.cache/ags/user/generated/terminal/sequences.txt
+end
+
+alias pamcan=pacman
+
+# function fish_prompt
+#   set_color cyan; echo (pwd)
+#   set_color green; echo '> '
+# end
+
+source ~/.config/fish/auto-Hypr.fish
 
 # Fuzzy Finder key bindings
 fzf --fish | source
