@@ -2,11 +2,9 @@
 
 ## Demo
 
-<https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265>
+![image](https://github.com/user-attachments/assets/ed964ac4-e1c4-4ccb-8f57-0a4b37fb95cc)
+![image](https://github.com/user-attachments/assets/40b95ab6-b99a-4fcf-8754-6a971fb3d63f)
 
-## Tmux Screenshot
-
-![image](https://github.com/trishan9/.dotfiles/assets/114591777/845527ae-39a8-44f5-85bf-356b4147c1cc)
 
 ## Things I use
 
